@@ -22,6 +22,7 @@ let
 in pkgs.mkShell {
   buildInputs = [
     hugo
+    git
   ];
 
   shellHook = ''

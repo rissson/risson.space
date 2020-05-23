@@ -1,4 +1,4 @@
-{ config, pkgs, theme, prod ? true }:
+{ config, pkgs, theme, prod ? true, baseURL ? "https://risson.space/" }:
 
 with pkgs;
 with lib;
@@ -537,7 +537,7 @@ let
   };
 
   personal.config = {
-    baseURL = "https://risson.space/";
+    inherit baseURL;
     title = "YABOB";
     copyright = "risson — All rights reserved";
 

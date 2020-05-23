@@ -6,7 +6,7 @@ let
   };
 in
 
-{ pkgs ? import nixpkgs { }, theme ? "slick" }:
+{ pkgs ? import nixpkgs { }, theme ? "slick", baseURL ? "https://risson.space/" }:
 
 with pkgs;
 with lib;
@@ -14,7 +14,7 @@ with lib;
 let
 
   hugoConfig = builtins.removeAttrs (
-    pkgs.callPackage ./config { inherit pkgs theme; }
+    pkgs.callPackage ./config { inherit pkgs theme baseURL; }
   ).config [ "_module" ];
 
   configFile = writeText "config.json" (builtins.toJSON hugoConfig);
@@ -26,6 +26,7 @@ in pkgs.stdenvNoCC.mkDerivation {
 
   buildInputs = [
     hugo
+    git
   ];
 
   buildPhase = ''

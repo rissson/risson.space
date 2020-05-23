@@ -1,0 +1,14 @@
+image: nixos/nix
+
+test:
+  script:
+    - nix-shell --run 'hugo version'
+    - nix-shell --run 'hugo --cleanDestinationDir --buildDrafts --buildExpired --buildFuture --templateMetrics --templateMetricsHints'
+
+pages:
+  script:
+    - path="$(nix-build . --argstr baseURL 'https://dev.risson.space/')"
+    - cp -r $path public
+  artifacts:
+    paths:
+      - public
