@@ -544,7 +544,7 @@ let
     enableRobotsTXT = true;
     footnoteReturnLinkContents = "↩";
 
-    #enableGitInfo = true;
+    enableGitInfo = true;
   } // (optionalAttrs (theme == "slick") {
     author = {
       name = "Marc 'risson' Schmitt";
