@@ -615,10 +615,50 @@ let
       ];
       footer = [
         {
+          name = "GitLab";
+          title = "GitLab profile";
+          url = "https://gitlab.com/risson";
+          weight = 1;
+        }
+        {
           name = "GitHub";
-          title = "My GitHub profile";
+          title = "GitHub profile";
           url = "https://github.com/rissson";
           weight = 2;
+        }
+        {
+          name = "Twitter";
+          title = "Twitter profile";
+          url = "https://twitter.com/marcerisson";
+          weight = 3;
+        }
+        {
+          name = "LinkedIn";
+          title = "LinkedIn profile";
+          url = "https://www.linkedin.com/in/marc-schmitt-9134a6150";
+          weight = 4;
+        }
+        {
+          name = "IRC";
+          title = "risson @ irc.freenode.net";
+          weight = 5;
+        }
+        {
+          name = "PGP Key";
+          title = "PGP Key";
+          url = "https://keys.openpgp.org/vks/v1/by-fingerprint/8A0E6A7C08ABB9DE67DE2A13F6FD87B15C263EC9";
+          weight = 6;
+        }
+        {
+          name = "GitHub";
+          title = "GitHub profile";
+          url = "https://github.com/rissson";
+          weight = 7;
+        }
+        {
+          name = "Email";
+          title = "marc [dot] schmitt [at] risson [dot] space";
+          weight = 8;
         }
       ];
     };
