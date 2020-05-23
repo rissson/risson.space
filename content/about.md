@@ -10,6 +10,8 @@ menu:
 categories: null
 tags: null
 series: null
+showmetadates: false
+showmetalinks: false
 ---
 
 I'm Marc Schmitt, _aka_ risson, a Software Engineering student at
