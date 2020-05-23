@@ -641,6 +641,7 @@ let
         {
           name = "IRC";
           title = "risson @ irc.freenode.net";
+          url = "#";
           weight = 5;
         }
         {
@@ -658,6 +659,7 @@ let
         {
           name = "Email";
           title = "marc [dot] schmitt [at] risson [dot] space";
+          url = "#";
           weight = 8;
         }
       ];
