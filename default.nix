@@ -31,14 +31,13 @@ in pkgs.stdenvNoCC.mkDerivation {
 
   buildPhase = ''
     hugo \
-      --cleanDestinationDir \
       --config ${configFile} \
+      --cleanDestinationDir \
+      --enableGitInfo \
       --forceSyncStatic \
       --ignoreCache \
       --ignoreVendor \
-      --minify \
-      --noChmod \
-      --noTimes
+      --minify
   '';
 
   installPhase = ''

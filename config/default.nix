@@ -116,7 +116,7 @@ let
       };
       lastmod = mkOption {
         type = with types; listOf str;
-        default = [ ":git" "lastmod" "date" "publishDate" ];
+        default = [ ":git" ];# "lastmod" "date" "publishDate" ];
       };
       publishDate = mkOption {
         type = with types; listOf str;
@@ -506,12 +506,6 @@ let
       type = with types; listOf path;
       default = [ ../assets ];
       apply = paths: pkgs.symlinkJoin { name = "assets"; inherit paths; };
-    };
-
-    contentDir = mkOption {
-      type = with types; listOf path;
-      default = [ ../content ];
-      apply = paths: pkgs.symlinkJoin { name = "contents"; inherit paths; };
     };
 
     dataDir = mkOption {
