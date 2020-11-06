@@ -1,0 +1,7 @@
+benchConfigs=( "mirror" "mirror-cache" "mirror-log" "mirror-cache-cache" "mirror-log-log" "mirror-cache-log" "mirror-cryptcache" "mirror-cryptlog" "mirror-cryptcache-cryptlog" )
+fioReadWrite=( "read" "randread" "readwrite" "randrw" "write" "randwrite" )
+fioRwRead=( "read" "randread" "readwrite" "randrw" )
+fioRwWrite=( "write" "randwrite" "readwrite" "randrw" )
+fioBlockSizes=( "512" "4k" "8k" "16k" "64k" "1m" )
+syncModes=( "sync" "async" )
+metrics=( "iops" "bandwidth-megabytes" )

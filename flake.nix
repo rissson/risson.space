@@ -37,10 +37,10 @@
           version = "unstable";
 
           src = final.fetchFromGitHub {
-            owner = "colorchestra";
+            owner = "rissson";
             repo = "smol";
-            rev = "b4a26052227c37a768846af47dfedeeab187b3f7";
-            sha256 = "0y2z6giy38fa9bmdcjvan5mpyyyl7yw9lz9hlhm8nxrrgsq54psf";
+            rev = "73484f7c17755e130fc6fee3aad1503685d3085a";
+            sha256 = "14yr0qq66042s0rhb47mkl1fqq59kk7sdppi9xad9mzxilsmksz7";
           };
 
           installPhase = ''
