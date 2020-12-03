@@ -1,4 +1,4 @@
-{ baseURL, isProduction ? true, theme ? "slick", themesDir, ... }:
+{ baseURL, isProduction, theme, themesDir, ... }:
 
 {
   inherit baseURL theme themesDir;

@@ -20,7 +20,7 @@ pages:
   stage: deploy
   needs: ["build"]
   script:
-    - nix -L build .
+    - nix -L build ".#yabob-dev"
     - cp -rL result public
   artifacts:
     paths:
