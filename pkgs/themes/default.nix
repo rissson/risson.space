@@ -1,5 +1,0 @@
-{ callPackage }:
-
-{
-  slick = callPackage ./slick { };
-}

@@ -10,6 +10,7 @@ categories:
 series:
   - EPITA projects
 date: 2020-01-26T23:58:00+0100
+lastmod: 2020-05-24T01:52:00+0200
 ---
 
 > #### Note to the reader

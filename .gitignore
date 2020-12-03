@@ -1,6 +1,4 @@
-config.json
-
-!pkgs/*
-
-public/
-result
+/config.json
+/public
+/result*
+/resources

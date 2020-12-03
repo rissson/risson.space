@@ -1,0 +1,38 @@
+image: nixpkgs/nix-flakes
+
+stages:
+  - build
+  - deploy
+
+before_script:
+  - mkdir -p /etc/nix
+  - echo "experimental-features = nix-command flakes ca-references" >> /etc/nix/nix.conf
+  - mkdir -p ~/.aws
+  - echo "[default]" > ~/.aws/config
+
+build:
+  stage: build
+  needs: []
+  script:
+    - nix -L build .
+
+pages:
+  stage: deploy
+  needs: ["build"]
+  script:
+    - nix -L build .
+    - cp -rL result public
+  artifacts:
+    paths:
+      - public
+
+production:
+  stage: deploy
+  needs: ["build"]
+  script:
+    - cat "${AWS_CREDENTIALS_FILE}" > ~/.aws/credentials
+    - nix profile install 'nixpkgs#awscli'
+    - nix -L build .
+    - aws s3 --endpoint-url "${AWS_ENDPOINT}" cp --acl public-read --recursive "$(readlink -f ./result)" "s3://${AWS_BUCKET}"
+  only:
+    - master

@@ -6,6 +6,7 @@ tags:
 categories:
   - postmortem
 date: 2019-03-03T16:26:00-0800
+lastmod: 2020-05-24T01:41:00+0200
 ---
 
 > #### Note to the reader

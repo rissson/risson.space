@@ -1,5 +1,0 @@
-{ callPackage }:
-
-{
-  themes = callPackage ./themes {};
-}

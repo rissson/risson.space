@@ -4,7 +4,8 @@ categories:
   - EPITA
 series:
   - EPITA projects
-date: 2018-06-13T09:00:00+02:00
+date: 2018-06-13T09:00:00+0200
+lastmod: 2020-05-25T00:17:00+0200
 ---
 
 This project was my first long project, at EPITA or otherwise, IT-related or
@@ -32,16 +33,17 @@ I forgot to mention, we were a team of four.
 Our very original idea was to make a game where the player would be a cat,
 trying to catch other cats, or avoid being caught. We named it __CatCatch__.
 
-The cats trying to catch other cats would be modeled after our teachers, and the
-cats avoiding being caught after the students. The map where the game would take
-place would be our school campus.
+The cats trying to catch other cats would be modeled after our teachers, and
+the cats avoiding being caught after the students. The map where the game would
+take place would be our school campus.
 
 So that's what we did! The multiplayer version of the game was what you would
 expect, the solo version was against some bots.
 
-You can read all about it in the specification and reports we had to submit[^1].
+You can read all about it in the specification and reports we had to
+submit[^1].
 
-[^1]: [Submitted documents](https://gitlab.com/risson-epita/prepa/42-2/CatCatch/CatCatch-docs/-/tags)
+[^1]: [Submitted documents](https://gitlab.com/42-2/CatCatch/CatCatch-docs/-/tags)
 
 ### The result
 
@@ -54,7 +56,7 @@ lighter, a customized CD installer and a printed user manual.
 All the executables are still available[^2], however the multiplayer mode won't
 work.
 
-[^2]: [Executables](https://gitlab.com/risson-epita/prepa/42-2/CatCatch/CatCatch/-/tags)
+[^2]: [Executables](https://gitlab.com/42-2/CatCatch/CatCatch/-/tags)
 
 ### Experience gained
 
@@ -67,16 +69,16 @@ impossible to read and merge manually. As I was the most experienced group
 member with git (I knew how to create a GitHub repository), I was put in charge
 of managing that aspect of the project. It taught me __a lot__ about branches,
 using pull/merge requests as part of my workflow, and some other stuff I had to
-do to repair my teammates' broken repositories. We also had to migrate to GitLab
-mid-project because of size limitations of GitHub.
+do to repair my teammates' broken repositories. We also had to migrate to
+GitLab mid-project because of size limitations of GitHub.
 
 #### Adaptability
 
 A long project is bound to have some of its requirements change during
 development. A team member leaves the school, a new team member joins, some
 aspect of the game has to change, …, all of those we had to adapt to. It wasn't
-always easy, but we didn't have a choice. It taught me to be flexible in the way
-I work, and be open to change.
+always easy, but we didn't have a choice. It taught me to be flexible in the
+way I work, and be open to change.
 
 ### In retrospect
 
@@ -84,5 +86,5 @@ This project was a great introduction to collaboration with other people. I
 think it was a great way to start with something fun!
 
 The source of this project is available
-[here](https://gitlab.com/risson-epita/prepa/42-2/CatCatch), such as the source
-for the submitted reports and the source of the website.
+[here](https://gitlab.com/42-2/CatCatch), such as the source for the submitted
+reports and the source of the website.
