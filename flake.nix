@@ -20,11 +20,11 @@
 
       version = "0.0.${substring 0 8 (self.lastModifiedDate or self.lastModified or "19700101")}_${self.shortRev or "dirty"}";
 
-      hugoConfig = pkgs: { baseURL ? "https://risson.space/", theme ? "slick", isProduction ? true }:
+      hugoConfig = pkgs: { baseURL ? "https://risson.space/", theme ? "smol", isProduction ? true }:
         pkgs.writeText "config.json" (builtins.toJSON (import ./config.nix {
           inherit baseURL theme isProduction;
           themesDir = pkgs.linkFarm "themesDir" [
-            { name = "slick"; path = pkgs.hugoThemes.slick; }
+            { name = "smol"; path = pkgs.hugoThemes.smol; }
           ];
         }));
     in
@@ -32,15 +32,15 @@
 
     {
       overlay = final: prev: {
-        hugoThemes.slick = final.stdenvNoCC.mkDerivation rec {
-          pname = "slick";
-          version = "0.3.2";
+        hugoThemes.smol = final.stdenvNoCC.mkDerivation rec {
+          pname = "smol";
+          version = "unstable";
 
           src = final.fetchFromGitHub {
-            owner = "spookey";
-            repo = "slick";
-            rev = "v${version}";
-            sha256 = "13432bmj61xfpn6s02mlb229660l882xn0mxs6p5fx1v0nmqm6d4";
+            owner = "colorchestra";
+            repo = "smol";
+            rev = "b4a26052227c37a768846af47dfedeeab187b3f7";
+            sha256 = "0y2z6giy38fa9bmdcjvan5mpyyyl7yw9lz9hlhm8nxrrgsq54psf";
           };
 
           installPhase = ''
@@ -48,7 +48,10 @@
           '';
 
           meta = with final.stdenv.lib; {
-            description = "A fast, minimal, responsive theme for Hugo which honours your privacy";
+            description = ''
+              A minimal, monospaced blogging theme for Hugo that respects your
+              privacy and is easy on your bandwidth.
+            '';
             maintainers = with maintainers; [ risson ];
             license = licenses.mit;
             platforms = platforms.unix;
@@ -114,7 +117,7 @@
         packages = {
           inherit (pkgs) yabob yabob-dev;
           hugoThemes = {
-            inherit (pkgs.hugoThemes) slick;
+            inherit (pkgs.hugoThemes) slick temple;
           };
         };
         defaultPackage = self.packages.${system}.yabob;

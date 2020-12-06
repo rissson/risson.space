@@ -11,20 +11,9 @@
   copyright = "risson — All rights reserved";
 
   params = {
-    css = null;
-    dateFmt = null;
+    dateFmt = "2006-01-02 15:04:05 -0700";
     description = "risson's blog. Mainly about Ops and some other stuff.";
-    errorPageText = "Woops! Looks like you got lost :/";
-    favicon = "favicon.png";
-    opengraph = true;
-    schema = true;
-    showEmptyPagination = false;
-    showFullContent = false;
-    showMetaDates = true;
-    showMetaLinks = true;
-    showNavHeader = true;
     subtitle = "Yet Another Boring Ops Blog";
-    twitter_cards = true;
   };
 
   enableRobotsTXT = true;
@@ -103,32 +92,27 @@
     footer = [
       {
         name = "GitLab";
-        title = "GitLab profile";
         url = "https://gitlab.com/risson";
         weight = 1;
       }
       {
         name = "GitHub";
-        title = "GitHub profile";
         url = "https://github.com/rissson";
         weight = 2;
       }
       {
         name = "Twitter";
-        title = "Twitter profile";
         url = "https://twitter.com/marcerisson";
         weight = 3;
       }
       {
         name = "LinkedIn";
-        title = "LinkedIn profile";
         url = "https://www.linkedin.com/in/marc-schmitt-9134a6150";
         weight = 4;
       }
       {
-        name = "IRC";
-        title = "risson @ irc.freenode.net";
-        url = "irc://risson@irc.freenode.net";
+        name = "IRC risson @ irc.freenode.net";
+        url = "#";
         weight = 5;
       }
       {
@@ -139,7 +123,6 @@
       }
       {
         name = "Email";
-        title = "marc.schmitt@risson.space";
         url = "mailto:marc.schmitt@risson.space";
         weight = 7;
       }
