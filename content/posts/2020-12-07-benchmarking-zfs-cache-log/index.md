@@ -5,7 +5,7 @@ tags:
   - ZFS
 categories:
   - Sysadmin
-date: 2020-12-04T20:30:00+0100
+date: 2020-12-07T15:29:00+0100
 ---
 
 Pursing updates I am making to my personal infrastructure, I wanted to deploy a
