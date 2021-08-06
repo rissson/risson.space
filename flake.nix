@@ -18,7 +18,7 @@
         overlays = [ self.overlay ];
       });
 
-      version = "0.0.${substring 0 8 (self.lastModifiedDate or self.lastModified or "19700101")}_${self.shortRev or "dirty"}";
+      version = "${substring 0 8 (self.lastModifiedDate or self.lastModified or "19700101")}_${self.shortRev or "dirty"}";
 
       hugoConfig = pkgs: { baseURL ? "https://risson.space/", theme ? "smol", isProduction ? true }:
         pkgs.writeText "config.json" (builtins.toJSON (import ./config.nix {
