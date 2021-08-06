@@ -116,9 +116,6 @@
 
         packages = {
           inherit (pkgs) yabob yabob-dev;
-          hugoThemes = {
-            inherit (pkgs.hugoThemes) slick temple;
-          };
         };
         defaultPackage = self.packages.${system}.yabob;
       }
