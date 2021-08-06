@@ -42,7 +42,7 @@ Here is a non-exhaustive list of technologies and tools I use and like:
 
 ### Music
 
-I’ve been a viola player for the past 14 years. I also played during 6 years
+I’ve been a viola player for the past 14 years. I also played during 4 years
 with the [Symphonic Youth Orchestra of
 Strasbourg<sup>fr</sup>](https://www.ojssymphonique.net), an associative
 orchestra. We went on tour around France, but also in China, Croatia and the
