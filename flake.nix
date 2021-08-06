@@ -5,9 +5,10 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixpkgs-unstable";
     futils.url = "github:numtide/flake-utils";
+    cv.url = "gitlab:risson/cv";
   };
 
-  outputs = { self, nixpkgs, futils }:
+  outputs = { self, nixpkgs, futils, cv }:
     let
       inherit (nixpkgs) lib;
       inherit (futils.lib) eachDefaultSystem defaultSystems;
@@ -15,7 +16,7 @@
 
       nixpkgsFor = genAttrs defaultSystems (system: import nixpkgs {
         inherit system;
-        overlays = [ self.overlay ];
+        overlays = [ self.overlay cv.overlay ];
       });
 
       version = "${substring 0 8 (self.lastModifiedDate or self.lastModified or "19700101")}_${self.shortRev or "dirty"}";
@@ -47,7 +48,7 @@
             cp -r $src $out
           '';
 
-          meta = with final.stdenv.lib; {
+          meta = with final.lib; {
             description = ''
               A minimal, monospaced blogging theme for Hugo that respects your
               privacy and is easy on your bandwidth.
@@ -78,11 +79,14 @@
               --minify
           '';
 
+          inherit (final) cv;
+
           installPhase = ''
             cp -r public $out
+            cp -r $cv/share $out/cv
           '';
 
-          meta = with final.stdenv.lib; {
+          meta = with final.lib; {
             inherit (self) description;
             maintainers = with maintainers; [ risson ];
             license = licenses.mit;

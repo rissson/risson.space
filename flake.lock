@@ -1,6 +1,40 @@
 {
   "nodes": {
+    "cv": {
+      "inputs": {
+        "futils": "futils",
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1628235610,
+        "narHash": "sha256-IkHSbfIEMlAm2IoAzpC/zE7t4GqAAZTkrbVW/Ty00fY=",
+        "owner": "risson",
+        "repo": "cv",
+        "rev": "ffde418183f5637b9110d2b94ca0973646b9639c",
+        "type": "gitlab"
+      },
+      "original": {
+        "owner": "risson",
+        "repo": "cv",
+        "type": "gitlab"
+      }
+    },
     "futils": {
+      "locked": {
+        "lastModified": 1601282935,
+        "narHash": "sha256-WQAFV6sGGQxrRs3a+/Yj9xUYvhTpukQJIcMbIi7LCJ4=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "588973065fce51f4763287f0fda87a174d78bf48",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "futils_2": {
       "locked": {
         "lastModified": 1605370193,
         "narHash": "sha256-YyMTf3URDL/otKdKgtoMChu4vfVL3vCMkRqpGifhUn0=",
@@ -17,11 +51,27 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1606744648,
-        "narHash": "sha256-/sBYrKS4uNFeX3cX1qmQ/viyqiDz7Eq/XoX4v2qSVgk=",
+        "lastModified": 1628055496,
+        "narHash": "sha256-nGXzjnY8DONfgraXJWVCyXgfRjuWNNGFEqpc1NpQzBA=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "c00959877fb06b09468562518b408acda886c79e",
+        "rev": "4d3e13e51b6e59b7892874b03072a7c931911e66",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1628144860,
+        "narHash": "sha256-cEBTjXuZVHCeCnQaZILI7mAiCWwX9nJ4dkup64zu8Lc=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "6dc0549183672acd39d735a465098ca9deeff6ad",
         "type": "github"
       },
       "original": {
@@ -32,8 +82,9 @@
     },
     "root": {
       "inputs": {
-        "futils": "futils",
-        "nixpkgs": "nixpkgs"
+        "cv": "cv",
+        "futils": "futils_2",
+        "nixpkgs": "nixpkgs_2"
       }
     }
   },
