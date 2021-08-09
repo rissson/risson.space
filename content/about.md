@@ -17,6 +17,10 @@ showmetalinks: false
 I'm Marc Schmitt, _aka_ risson, a Software Engineering student at
 [EPITA](https://www.epita.fr).
 
+I occasionally write on the following blogs:
+
+- [CRI blog](https://blog.cri.epita.fr)
+
 Below is an informal list of what I do and like to do, but if you're looking for
 a format Curriculum Vitae here it is: [english version](/cv/cv-en.pdf), [french
 version](/cv/cv-fr.pdf).
