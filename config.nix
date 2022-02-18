@@ -111,7 +111,7 @@
         weight = 4;
       }
       {
-        name = "IRC risson @ irc.freenode.net";
+        name = "IRC risson @ irc.libera.chat";
         url = "#";
         weight = 5;
       }
