@@ -107,7 +107,7 @@
       }
       {
         name = "LinkedIn";
-        url = "https://www.linkedin.com/in/marc-schmitt-9134a6150";
+        url = "https://www.linkedin.com/in/risson/";
         weight = 4;
       }
       {
