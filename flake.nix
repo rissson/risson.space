@@ -75,7 +75,6 @@
               --cleanDestinationDir \
               --forceSyncStatic \
               --ignoreCache \
-              --ignoreVendor \
               --minify
           '';
 
@@ -87,7 +86,7 @@
           '';
 
           meta = with final.lib; {
-            inherit (self) description;
+            description = "risson's blog: Yet Another Boring Ops Blog";
             maintainers = with maintainers; [ risson ];
             license = licenses.mit;
             platforms = platforms.unix;
